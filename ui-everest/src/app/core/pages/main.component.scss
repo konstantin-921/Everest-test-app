@@ -1,0 +1,16 @@
+@import "../../app.mixins.scss";
+
+.main-page {
+  width: 98%;
+  max-width: 1140px;
+  margin: 0 auto;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    @include sm {
+      display: block;
+    }
+  }
+}

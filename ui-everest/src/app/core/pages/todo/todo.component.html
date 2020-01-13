@@ -1,0 +1,42 @@
+<div class="todo">
+  <div
+    [ngClass]="'todo__check ' + (todo.completed ? 'checked' : '')"
+    (click)="changeState(todo)"
+  >
+    <svg
+      enable-background="new 0 0 515.556 515.556"
+      height="8"
+      width="8"
+      viewBox="0 0 515.556 515.556"
+    >
+      <path
+        [ngStyle]="{ fill: todo.completed ? '#00d290' : '#dadada' }"
+        d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"
+      />
+    </svg>
+  </div>
+  <div class="todo__details">
+    <span class="todo__name">{{ todo.todo }}</span>
+    <span class="todo__desc">{{ todo.desc }}</span>
+  </div>
+  <div class="todo__details-two">
+    <span
+      class="todo__info"
+      [ngStyle]="{ color: todo.info.length === 3 ? 'red' : 'black' }"
+    >
+      {{ todo.info }}
+    </span>
+    <span
+      [ngClass]="{
+        'red-bckg': todo.state === 'high-price',
+        'yellow-bckg': todo.state === 'medium',
+        'todo__state ': true
+      }"
+    >
+      {{
+        todo.state === "high-price" ? "High price" : (todo.state | titlecase)
+      }}
+    </span>
+  </div>
+  <img src="../../../../assets/images/image-19.png" class="todo__avatar" />
+</div>

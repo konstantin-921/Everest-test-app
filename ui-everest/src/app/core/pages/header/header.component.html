@@ -1,0 +1,47 @@
+<div class="header">
+  <img class="header__logo" src="../../../../assets/images/logo.png" />
+  <div class="header__nav">
+    <ul class="header__nav-list">
+      <li class="header__nav-item">dashboard</li>
+      <li class="header__nav-item">projects</li>
+      <li class="header__nav-item">toolshelf</li>
+      <li class="header__nav-item">network</li>
+      <li class="header__nav-item mobile-profile">profile</li>
+    </ul>
+  </div>
+  <div class="header__profile">
+    <div class="header__profile-item">
+      <span class="header__profile-count-email">5</span>
+      <img src="../../../../assets/images/email.svg" alt="email" />
+    </div>
+    <div class="header__profile-item">
+      <img src="../../../../assets/images/chat-1.svg" alt="chat" />
+    </div>
+    <div class="header__profile-item">
+      <img src="../../../../assets/images/wheel.svg" alt="wheel" />
+    </div>
+    <div class="header__profile-item">
+      <img src="../../../../assets/images/image-1.png" alt="ava" />
+    </div>
+  </div>
+  <img
+    (click)="toggleModalMenu($event)"
+    class="mobile-menu"
+    src="../../../../assets/images/menu.svg"
+    alt="menu"
+  />
+  <ul
+    *ngIf="isOpenMenu"
+    class="mobile-list"
+    [ngStyle]="{ top: y + 125 + 'px', left: x - 20 + 'px' }"
+    (clickOutside)="onClickedOutside()"
+    [exclude]="'.mobile-menu'"
+    [excludeBeforeClick]="true"
+  >
+    <li class="header__nav-item">dashboard</li>
+    <li class="header__nav-item">projects</li>
+    <li class="header__nav-item">toolshelf</li>
+    <li class="header__nav-item">network</li>
+    <li class="header__nav-item mobile-profile">profile</li>
+  </ul>
+</div>

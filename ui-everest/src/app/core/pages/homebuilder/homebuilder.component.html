@@ -1,0 +1,16 @@
+<div class="homebuilder">
+  <h1 class="homebuilder__headline">Homebuilder</h1>
+  <div class="homebuilder__info">
+    <div class="homebuilder__header">
+      <button class="homebuilder__add-btn">Add Items</button>
+      <div class="homebuilder__events">
+        <span class="homebuilder__search">Search</span>
+        <img
+          class="homebuilder__select"
+          src="../../../../assets/images/arrow-down.svg"
+        />
+      </div>
+    </div>
+    <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+  </div>
+</div>

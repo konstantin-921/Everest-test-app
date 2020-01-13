@@ -1,0 +1,15 @@
+version: "3" # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  angular: # name of the first service
+    build: ui-everest # specify the directory of the Dockerfile
+    ports:
+      - "4201:4200" # specify port forewarding
+    # network_mode: host
+    # depends_on:
+    #   - server
+  express: #name of the second service
+    build: api-everest # specify the directory of the Dockerfile
+    ports:
+      - "3000:3000" #specify ports forewarding

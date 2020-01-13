@@ -1,0 +1,14 @@
+<div
+  *ngIf="isOpen"
+  class="modal"
+  [ngStyle]="{ top: y + 47 + 'px', left: x + 5 + 'px' }"
+  (clickOutside)="onClickedOutside()"
+  [excludeBeforeClick]="true"
+  [exclude]="'.activity__btn, .active-btn, .btn-path, .btn-icon'"
+>
+  <ul class="modal__list">
+    <li class="modal__item">Review</li>
+    <li class="modal__item">Message</li>
+    <li class="modal__item">Reshedule</li>
+  </ul>
+</div>

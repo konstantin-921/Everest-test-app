@@ -1,0 +1,262 @@
+@import "../../../app.mixins.scss";
+.activity {
+  width: 709px;
+  @include sm {
+    width: 100%;
+  }
+  &__headline {
+    font-family: "Proxima", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #383838;
+  }
+  &__main {
+    width: 100%;
+    height: 557px;
+    background: #ffffff;
+    border: 1px solid #c2ccd1;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    @include sm {
+      height: auto;
+    }
+  }
+  &__search {
+    height: 41px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #c2ccd1;
+    &__img {
+      width: 12px;
+      height: 12px;
+      margin: 0 10px 0 25px;
+    }
+    &__input {
+      width: 660px;
+      height: 100%;
+      border: 0;
+      background: transparent;
+      outline: none;
+      font-family: "Proxima", sans-serif;
+      font-size: 13px;
+      line-height: 15px;
+      color: #afb8bf;
+      @include sm {
+        width: calc(100% - 25px);
+      }
+    }
+  }
+  &__details {
+    @include sm {
+      width: 95%;
+    }
+  }
+  &__first-field {
+    height: 188px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid #c2ccd1;
+    @include sm {
+      padding: 10px 10px;
+      min-height: 188px;
+      height: auto;
+    }
+  }
+  &__field {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid #c2ccd1;
+    @include sm {
+      padding: 10px 20px 0 15px;
+      min-height: 72px;
+      height: auto;
+    }
+    @include sm-new {
+      padding: 10px 10px 0 5px;
+    }
+  }
+  &__main-info {
+    display: flex;
+    align-items: center;
+    &:hover {
+      cursor: default;
+    }
+  }
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__name-container {
+    @include sm-new {
+      width: 220px;
+    }
+  }
+  &__name {
+    font-family: "Proxima-Bold", sans-serif;
+    font-size: 13px;
+    color: #4c84ff;
+    margin-right: 5px;
+  }
+  &__event {
+    font-family: "Proxima-Bold", sans-serif;
+    font-size: 13px;
+    color: #383838;
+  }
+  &__city-container {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__city {
+    font-family: "Proxima", sans-serif;
+    font-size: 12px;
+    color: #383838;
+  }
+  &__hash {
+    font-family: "Proxima", sans-serif;
+    font-size: 12px;
+    color: #383838;
+    position: relative;
+    &:before {
+      content: url("../../../../assets/images/ellipse-2.svg");
+      position: absolute;
+      top: -2px;
+      left: -9px;
+      width: 5px;
+      height: 5px;
+    }
+  }
+  &__date {
+    font-family: "Proxima", sans-serif;
+    font-size: 11px;
+    color: #8f99a1;
+  }
+  &__photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 470px;
+    margin: 15px 0 20px 50px;
+    img {
+      @include sm {
+        margin-bottom: 10px;
+      }
+    }
+    @include sm {
+      width: 85%;
+      margin-bottom: 0;
+    }
+    @include sm-new {
+      width: 70%;
+      margin-bottom: 0;
+    }
+  }
+  &__view-all {
+    font-family: "Proxima", sans-serif;
+    font-size: 11px;
+    color: #8f99a1;
+    margin-left: 50px;
+  }
+  &__btn {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #dadada;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__contact-event {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 6px 0 0 50px;
+  }
+  &__event-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__view-contact {
+    width: 50px;
+    display: block;
+    font-family: "Actor", sans-serif;
+    font-size: 11px;
+    text-decoration-line: underline;
+    color: #8f99a1;
+    &:hover {
+      color: #00d290;
+      cursor: pointer;
+    }
+  }
+  &__sign-contact {
+    width: 50px;
+    display: block;
+    font-family: "Actor", sans-serif;
+    font-size: 11px;
+    text-decoration-line: underline;
+    color: #8f99a1;
+    &:hover {
+      color: #00d290;
+      cursor: pointer;
+    }
+  }
+}
+
+.active-btn {
+  border: 1px solid #00d290;
+}
+.active-block {
+  box-shadow: inset 2px 0px 0px 0px rgba(255, 85, 96, 1);
+}
+.second-field-name {
+  color: #383838;
+}
+.second-field-event {
+  color: #ff5560;
+}
+.second-filed-avatar {
+  background: #ff5560;
+}
+.fourth-field-avatar {
+  background: #00cec1;
+}
+.regular-name {
+  font-family: "Proxima", sans-serif;
+}
+.fifth-field-avatar {
+  background: #db5ffc;
+}
+.fourth-field {
+  height: 109px;
+  border-bottom: none;
+  @include sm {
+    min-height: 109px;
+    height: auto;
+  }
+}
+.icon {
+  fill: #afb8bf;
+  margin-right: 5px;
+  &:hover {
+    fill: #00d290;
+  }
+}

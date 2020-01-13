@@ -1,0 +1,41 @@
+.modal {
+  width: 75px;
+  height: 55px;
+  background: #ffffff;
+  border: 1px solid #c2ccd1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 100;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  &__list {
+    list-style-type: none;
+    padding: 0 0 0 5px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    li:nth-child(1):before {
+      content: url("../../../../assets/images/chat.svg");
+      margin-right: 5px;
+    }
+    li:nth-child(2):before {
+      content: url("../../../../assets/images/chat.svg");
+      margin-right: 5px;
+    }
+    li:nth-child(3):before {
+      content: url("../../../../assets/images/calendar.svg");
+      margin-right: 5px;
+    }
+  }
+  &__item {
+    font-family: "Actor", sans-serif;
+    font-size: 10px;
+    color: #383838;
+    display: flex;
+    &:hover {
+      cursor: default;
+    }
+  }
+}

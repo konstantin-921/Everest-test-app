@@ -1,0 +1,75 @@
+@import "../../../app.mixins.scss";
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  padding: 0 12px;
+  border-bottom: 0.5px solid #c2ccd1;
+  &:hover {
+    cursor: pointer;
+  }
+  @include sm-new {
+    height: auto;
+    padding: 10px 8px;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include sm-new {
+      width: 140px;
+    }
+  }
+  &__check {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__name {
+    font-family: "Actor";
+    font-size: 13px;
+    color: #383838;
+  }
+  &__details-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__desc {
+    font-family: "Actor";
+    font-size: 11px;
+    color: #8f99a1;
+  }
+  &__info {
+    font-family: "Actor";
+    font-size: 12px;
+  }
+  &__state {
+    font-family: "Actor";
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #00b77e;
+    border-radius: 10px;
+    padding: 1px 4px;
+  }
+  &__avatar {
+    border-radius: 50%;
+  }
+}
+.checked {
+  border: 1px solid #00d290;
+}
+.yellow-bckg {
+  background: #ffc100;
+}
+.red-bckg {
+  background: red;
+}

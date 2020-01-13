@@ -1,0 +1,21 @@
+$small: 320px;
+$medium: 768px;
+$large: 1024px;
+
+@mixin sm {
+  @media only screen and (min-width: $small) and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin sm-new {
+  @media only screen and (min-width: $small) and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: $medium + 1) and (max-width: $large) {
+    @content;
+  }
+}

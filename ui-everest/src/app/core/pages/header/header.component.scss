@@ -1,0 +1,139 @@
+@import "../../../app.mixins.scss";
+.header {
+  height: 60px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  &__nav {
+    height: 38px;
+    width: 350px;
+    align-self: flex-end;
+    @include sm {
+      display: none;
+    }
+    &-list {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      @include sm {
+        display: none;
+      }
+    }
+    &-item {
+      height: 100%;
+      font-family: "Proxima", sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #383838;
+      position: relative;
+      &:hover {
+        cursor: pointer;
+        box-shadow: inset 0px -4px 0px 0px rgba(0, 210, 144, 1);
+      }
+    }
+    &-item:nth-child(2):after,
+    &-item:nth-child(3):after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background: #ff5560;
+      border-radius: 50%;
+      left: 70px;
+    }
+    &-item:nth-child(3):after {
+      left: 77px;
+    }
+  }
+  &__profile {
+    width: 152px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img:hover {
+      cursor: pointer;
+    }
+    &-item {
+      position: relative;
+    }
+    &-item:nth-child(4) img {
+      border-radius: 50%;
+    }
+    &-count-email {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      background: blue;
+      border-radius: 50%;
+      color: white;
+      font-family: "Proxima";
+      font-size: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(-50%, -50%);
+      left: 25px;
+      top: 5px;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+  .mobile-profile {
+    display: none;
+    @include sm {
+      display: block;
+    }
+  }
+  .mobile-menu {
+    display: none;
+    &:hover {
+      cursor: pointer;
+    }
+    @include sm {
+      display: block;
+    }
+  }
+  .mobile-list {
+    display: none;
+    @include sm {
+      position: absolute;
+      display: flex;
+      height: 180px;
+      width: 120px;
+      background: white;
+      z-index: 100;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0 0 0 10px;
+      list-style-type: none;
+      border: 1px solid #c2ccd1;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transform: translate(-50%, -50%);
+    }
+    .header__nav-item {
+      height: auto;
+      &:hover {
+        box-shadow: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
